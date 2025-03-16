@@ -1,0 +1,8 @@
+services:
+  photon:
+    image: saschl/photon-geocoder:latest
+    volumes:
+      - /volume2/docker/photon:/photon/photon_data
+    ports:
+      - 2322:2322
+
