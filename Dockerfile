@@ -1,8 +1,8 @@
-FROM sapmachine:17-jre-alpine
+FROM sapmachine:17
 
 # Install pbzip2 for parallel extraction
-RUN apt-get update \
-    && apt-get -y install \
+RUN apt update \
+    && apt -y install \
         pbzip2 \
         wget \
     && rm -rf /var/lib/apt/lists/*

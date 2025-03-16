@@ -12,7 +12,7 @@ if [ ! -d "/photon/photon_data/elasticsearch" ]; then
     # If you want to install a specific region only, enable the line below and disable the current 'wget' row.
     # Take a look at http://download1.graphhopper.com/public/extracts/by-country-code for your country
     # wget --user-agent="$USER_AGENT" -O - http://download1.graphhopper.com/public/extracts/by-country-code/nl/photon-db-nl-latest.tar.bz2 | bzip2 -cd | tar x
-    wget --user-agent="$USER_AGENT" -O -  https://download1.graphhopper.com/public/photon-db-latest.tar.bz2 | pbzip2 -cd | tar x
+    wget -q --show-progress --user-agent="$USER_AGENT" -O -  https://download1.graphhopper.com/public/photon-db-latest.tar.bz2 | pbzip2 -cd | tar x
 fi
 
 # Start photon if elastic index exists
